@@ -1,455 +1,0 @@
-[日志] 控制台完整日志保存到：D:\MyProjects\程序升级更新\程序更新\选股结果\console_logs\控制台日志_20260515_172346.txt
-[EMQuantAPI] 正在登录（已隐藏密码）
-[EMQuantAPI] 登录异常（本进程内不再重试 start）: 'utf-8' codec can't decode byte 0xb6 in position 3: invalid start byte
-[智能源] EMQuantAPI 初始化成功（负责K线数据）
-[智能源] AKShare 就绪（备用/大盘数据）
-[AKShare现货(名称缓存)] 第 1/3 次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare现货(名称缓存)] 第 2/3 次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare现货(名称缓存)] 第 3/3 次失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[智能源] 构建证券简称内存缓存失败: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-============================================================
-  短线选股系统 v6.6.1_保留东财K线+修复量比NaN+保存控制台日志
-  运行开始：2026-05-15 17:24:09 | 目标日期：最新交易日
-============================================================
-
-[大盘] 检查大盘环境...
-[大盘] 环境正常：大盘正常（上证-1.5%，MA20 5日回落-1.50%）
-
-[日期] K线日线截止日：20260514（2026-05-14）
-[日期] K线请求起点：20260205（相对截止日回溯参数=60 个交易日，min(HIST_DAYS+30=120, MAX_KLINE_TRADE_DAYS=60)）
-
-[候选] v6.5 从用户名单加载（文件=D:\MyProjects\程序升级更新\程序更新\热门股名单\选股热门名单2026.5.14.example.txt；HOT_LIST_MAX_CODES=不限制）
-[热门名单] 制表符表解析（避免将「编号」列误当代码）：代码列索引=1，名称列=2，有效行=197
-[热门名单] 已载入 197 只 ← D:\MyProjects\程序升级更新\程序更新\热门股名单\选股热门名单2026.5.14.example.txt
-
-[涨停] 获取涨停池：涨停日 zt_pool_date=20260513（2026-05-13）；东财 sector 参考日仍=K线日线截止 trade_date=20260514（2026-05-14）
-[智能源] 使用 AKShareAdapter 获取 get_limit_up_pool
-[涨停] 过滤ST股：113 -> 113
-[涨停] 有效涨停股：113 只
-[规则] v6.6.1 扫描候选仅来自用户名单文件（见 HOT_LIST_FILE / STOCK_HOT_LIST_FILE），不以涨停池合并进扫描名单；涨停池仅用于昨日涨停/连板/封单等评分加权。
-
-[扫描] 多线程筛选（8线程）...
-[AKShare] K线获取失败 601138: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300661: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601857: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600152: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601138: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601138 K线获取为空[AKShare] K线获取失败 300661: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300661 K线获取为空[AKShare] K线获取失败 601857: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601857 K线获取为空[AKShare] K线获取失败 600152: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600152 K线获取为空[AKShare] K线获取失败 601991: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002049: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600028: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300067: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601991: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601991 K线获取为空[AKShare] K线获取失败 002049: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002049 K线获取为空[AKShare] K线获取失败 600028: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600028 K线获取为空[AKShare] K线获取失败 300067: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300067 K线获取为空[AKShare] K线获取失败 002015: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600584: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601088: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002418: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002015: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002015 K线获取为空[AKShare] K线获取失败 600584: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600584 K线获取为空[AKShare] K线获取失败 601088: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601088 K线获取为空[AKShare] K线获取失败 002418: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002418 K线获取为空[AKShare] K线获取失败 600396: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603160: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600036: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300058: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600396: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600396 K线获取为空[AKShare] K线获取失败 603160: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603160 K线获取为空[AKShare] K线获取失败 600036: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600036 K线获取为空[AKShare] K线获取失败 300058: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300058 K线获取为空[AKShare] K线获取失败 601016: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688099: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601398: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002297: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601016: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601016 K线获取为空[AKShare] K线获取失败 688099: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688099 K线获取为空[AKShare] K线获取失败 601398: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601398 K线获取为空[AKShare] K线获取失败 002297: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002297 K线获取为空[AKShare] K线获取失败 000925: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300433: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601288: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600986: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000925: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000925 K线获取为空[AKShare] K线获取失败 300433: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300433 K线获取为空[AKShare] K线获取失败 601288: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601288 K线获取为空[AKShare] K线获取失败 600986: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600986 K线获取为空[AKShare] K线获取失败 002498: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002241: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601939: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002782: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002498: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002498 K线获取为空[AKShare] K线获取失败 002241: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002241 K线获取为空[AKShare] K线获取失败 601939: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601939 K线获取为空[AKShare] K线获取失败 002782: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002782 K线获取为空[AKShare] K线获取失败 002081: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601012: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600016: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 001223: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002081: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002081 K线获取为空[AKShare] K线获取失败 601012: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601012 K线获取为空[AKShare] K线获取失败 600016: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600016 K线获取为空[AKShare] K线获取失败 001223: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 001223 K线获取为空[AKShare] K线获取失败 000767: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002129: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000001: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002723: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000767: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000767 K线获取为空[AKShare] K线获取失败 002129: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002129 K线获取为空[AKShare] K线获取失败 000001: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000001 K线获取为空[AKShare] K线获取失败 002723: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002723 K线获取为空[AKShare] K线获取失败 002491: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600438: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601166: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 920469: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002491: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002491 K线获取为空[AKShare] K线获取失败 600438: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600438 K线获取为空[AKShare] K线获取失败 601166: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601166 K线获取为空[AKShare] K线获取失败 920469: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 920469 K线获取为空[AKShare] K线获取失败 002506: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601615: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600030: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300553: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002506: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002506 K线获取为空[AKShare] K线获取失败 601615: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601615 K线获取为空[AKShare] K线获取失败 600030: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600030 K线获取为空[AKShare] K线获取失败 300553: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300553 K线获取为空[智能源] 使用 AKShareAdapter 获取 get_kline
-[智能源] 使用 AKShareAdapter 获取 get_kline
-[智能源] 使用 AKShareAdapter 获取 get_kline
-[智能源] 使用 AKShareAdapter 获取 get_kline
-[智能源] 使用 AKShareAdapter 获取 get_kline
-[AKShare] K线获取失败 601865: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601211: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688234: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002918: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601865: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601865 K线获取为空[AKShare] K线获取失败 601211: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601211 K线获取为空[AKShare] K线获取失败 688234: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688234 K线获取为空[AKShare] K线获取失败 002918: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002918 K线获取为空[AKShare] K线获取失败 002459: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600837: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002600: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603007: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002459: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002459 K线获取为空[AKShare] K线获取失败 600837: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600837 K线获取为空[AKShare] K线获取失败 002600: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002600 K线获取为空[AKShare] K线获取失败 603007: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603007 K线获取为空[AKShare] K线获取失败 688599: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601688: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300308: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603052: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688599: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688599 K线获取为空[AKShare] K线获取失败 601688: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601688 K线获取为空[AKShare] K线获取失败 300308: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300308 K线获取为空[AKShare] K线获取失败 603052: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603052 K线获取为空[AKShare] K线获取失败 002202: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000002: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601778: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600578: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002202: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002202 K线获取为空[AKShare] K线获取失败 000002: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000002 K线获取为空[AKShare] K线获取失败 601778: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601778 K线获取为空[AKShare] K线获取失败 600578: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600578 K线获取为空[AKShare] K线获取失败 600732: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600048: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300456: ('Connection aborted.', ConnectionAbortedError(10053, '你的主机中的软件中止了一个已建立的连接。', None, 10053, None))
-[AKShare] K线获取失败 603118: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600732: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600732 K线获取为空[AKShare] K线获取失败 600048: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600048 K线获取为空[AKShare] K线获取失败 300456: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300456 K线获取为空[AKShare] K线获取失败 603118: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603118 K线获取为空[AKShare] K线获取失败 002610: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601668: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600105: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600156: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002610: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002610 K线获取为空[AKShare] K线获取失败 601668: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601668 K线获取为空[AKShare] K线获取失败 600105: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600105 K线获取为空[AKShare] K线获取失败 600156: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600156 K线获取为空[AKShare] K线获取失败 601877: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600585: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300475: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688281: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601877: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601877 K线获取为空[AKShare] K线获取失败 600585: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600585 K线获取为空[AKShare] K线获取失败 300475: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300475 K线获取为空[AKShare] K线获取失败 688281: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688281 K线获取为空[AKShare] K线获取失败 300763: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000725: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002031: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002940: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300763: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300763 K线获取为空[AKShare] K线获取失败 000725: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000725 K线获取为空[AKShare] K线获取失败 002031: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002031 K线获取为空[AKShare] K线获取失败 002940: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002940 K线获取为空[AKShare] K线获取失败 300118: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600276: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000159: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002254: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300118: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300118 K线获取为空[AKShare] K线获取失败 600276: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600276 K线获取为空[AKShare] K线获取失败 000159: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000159 K线获取为空[AKShare] K线获取失败 002254: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002254 K线获取为空[AKShare] K线获取失败 600089: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300760: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000995: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688146: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600089: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600089 K线获取为空[AKShare] K线获取失败 300760: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300760 K线获取为空[AKShare] K线获取失败 000995: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000995 K线获取为空[AKShare] K线获取失败 688146: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688146 K线获取为空[AKShare] K线获取失败 601567: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002415: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603919: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002971: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601567: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601567 K线获取为空[AKShare] K线获取失败 002415: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002415 K线获取为空[AKShare] K线获取失败 603919: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603919 K线获取为空[AKShare] K线获取失败 002971: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002971 K线获取为空[AKShare] K线获取失败 000400: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603259: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000799: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 001210: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000400: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000400 K线获取为空[AKShare] K线获取失败 603259: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603259 K线获取为空[AKShare] K线获取失败 000799: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000799 K线获取为空[AKShare] K线获取失败 001210: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 001210 K线获取为空[AKShare] K线获取失败 002074: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600809: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688008: ('Connection aborted.', ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None))
-[AKShare] K线获取失败 688478: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002074: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002074 K线获取为空[AKShare] K线获取失败 600809: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600809 K线获取为空[AKShare] K线获取失败 688008: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688008 K线获取为空[AKShare] K线获取失败 688478: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688478 K线获取为空[AKShare] K线获取失败 300014: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300015: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688256: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 920580: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300014: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300014 K线获取为空[AKShare] K线获取失败 300015: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300015 K线获取为空[AKShare] K线获取失败 688256: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688256 K线获取为空[AKShare] K线获取失败 920580: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 920580 K线获取为空[AKShare] K线获取失败 300207: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002142: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300394: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 003018: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300207: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300207 K线获取为空[AKShare] K线获取失败 002142: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002142 K线获取为空[AKShare] K线获取失败 300394: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300394 K线获取为空[AKShare] K线获取失败 003018: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 003018 K线获取为空[AKShare] K线获取失败 002709: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600309: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300502: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688143: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002709: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002709 K线获取为空[AKShare] K线获取失败 600309: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600309 K线获取为空[AKShare] K线获取失败 300502: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300502 K线获取为空[AKShare] K线获取失败 688143: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688143 K线获取为空[AKShare] K线获取失败 300450: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600009: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603019: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600819: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300450: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300450 K线获取为空[AKShare] K线获取失败 600009: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600009 K线获取为空[AKShare] K线获取失败 603019: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603019 K线获取为空[AKShare] K线获取失败 600819: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600819 K线获取为空[AKShare] K线获取失败 300124: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600050: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000977: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600509: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300124: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300124 K线获取为空[AKShare] K线获取失败 600050: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600050 K线获取为空[AKShare] K线获取失败 000977: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000977 K线获取为空[AKShare] K线获取失败 600509: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600509 K线获取为空[AKShare] K线获取失败 002460: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601728: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688041: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002617: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002460: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002460 K线获取为空[AKShare] K线获取失败 601728: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601728 K线获取为空[AKShare] K线获取失败 688041: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688041 K线获取为空[AKShare] K线获取失败 002617: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002617 K线获取为空[AKShare] K线获取失败 002466: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600941: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002230: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 605366: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002466: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002466 K线获取为空[AKShare] K线获取失败 600941: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600941 K线获取为空[AKShare] K线获取失败 002230: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002230 K线获取为空[AKShare] K线获取失败 605366: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 605366 K线获取为空[AKShare] K线获取失败 300496: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688111: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300750: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 605399: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300496: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300496 K线获取为空[AKShare] K线获取失败 688111: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688111 K线获取为空[AKShare] K线获取失败 300750: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300750 K线获取为空[AKShare] K线获取失败 605399: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 605399 K线获取为空[AKShare] K线获取失败 601689: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300033: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002594: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002132: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601689: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601689 K线获取为空[AKShare] K线获取失败 300033: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300033 K线获取为空[AKShare] K线获取失败 002594: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002594 K线获取为空[AKShare] K线获取失败 002132: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002132 K线获取为空[AKShare] K线获取失败 002920: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002410: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600199: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002245: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002920: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002920 K线获取为空[AKShare] K线获取失败 002410: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002410 K线获取为空[AKShare] K线获取失败 600199: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600199 K线获取为空[AKShare] K线获取失败 002245: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002245 K线获取为空[AKShare] K线获取失败 600741: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600570: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603369: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002165: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600741: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600741 K线获取为空[AKShare] K线获取失败 600570: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600570 K线获取为空[AKShare] K线获取失败 603369: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603369 K线获取为空[AKShare] K线获取失败 002165: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002165 K线获取为空[AKShare] K线获取失败 000625: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002236: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603198: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002809: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000625: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000625 K线获取为空[AKShare] K线获取失败 002236: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002236 K线获取为空[AKShare] K线获取失败 603198: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603198 K线获取为空[AKShare] K线获取失败 002809: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002809 K线获取为空[AKShare] K线获取失败 601633: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603881: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000568: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 605020: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 601633: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 601633 K线获取为空[AKShare] K线获取失败 603881: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603881 K线获取为空[AKShare] K线获取失败 000568: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000568 K线获取为空[AKShare] K线获取失败 605020: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 605020 K线获取为空[AKShare] K线获取失败 600104: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300454: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002916: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002208: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600104: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600104 K线获取为空[AKShare] K线获取失败 300454: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300454 K线获取为空[AKShare] K线获取失败 002916: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002916 K线获取为空[AKShare] K线获取失败 002208: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002208 K线获取为空[AKShare] K线获取失败 000338: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688561: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002384: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002124: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000338: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000338 K线获取为空[AKShare] K线获取失败 688561: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688561 K线获取为空[AKShare] K线获取失败 002384: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002384 K线获取为空[AKShare] K线获取失败 002124: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002124 K线获取为空[AKShare] K线获取失败 600519: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002439: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002475: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603717: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600519: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600519 K线获取为空[AKShare] K线获取失败 002439: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002439 K线获取为空[AKShare] K线获取失败 002475: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002475 K线获取为空[AKShare] K线获取失败 603717: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603717 K线获取为空[AKShare] K线获取失败 000858: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300369: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603501: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300761: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000858: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000858 K线获取为空[AKShare] K线获取失败 300369: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300369 K线获取为空[AKShare] K线获取失败 603501: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603501 K线获取为空[AKShare] K线获取失败 300761: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300761 K线获取为空[AKShare] K线获取失败 000333: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688188: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688981: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 605296: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000333: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000333 K线获取为空[AKShare] K线获取失败 688188: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688188 K线获取为空[AKShare] K线获取失败 688981: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688981 K线获取为空[AKShare] K线获取失败 605296: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 605296 K线获取为空[AKShare] K线获取失败 000651: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688169: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688012: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603477: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000651: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000651 K线获取为空[AKShare] K线获取失败 688169: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688169 K线获取为空[AKShare] K线获取失败 688012: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688012 K线获取为空[AKShare] K线获取失败 603477: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603477 K线获取为空[AKShare] K线获取失败 600887: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603486: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688396: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002299: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600887: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600887 K线获取为空[AKShare] K线获取失败 603486: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603486 K线获取为空[AKShare] K线获取失败 688396: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688396 K线获取为空[AKShare] K线获取失败 002299: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002299 K线获取为空[AKShare] K线获取失败 002714: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603344: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002371: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002157: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002714: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002714 K线获取为空[AKShare] K线获取失败 603344: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603344 K线获取为空[AKShare] K线获取失败 002371: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002371 K线获取为空[AKShare] K线获取失败 002157: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002157 K线获取为空[AKShare] K线获取失败 300498: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603082: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 603986: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002311: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300498: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300498 K线获取为空[AKShare] K线获取失败 603082: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603082 K线获取为空[扫描中] 47/197 (0.2 it/s), 预计剩余 10.8 min[AKShare] K线获取失败 603986: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 603986 K线获取为空[AKShare] K线获取失败 002311: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002311 K线获取为空[AKShare] K线获取失败 000876: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688536: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002603: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 000876: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 000876 K线获取为空[AKShare] K线获取失败 688536: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688536 K线获取为空[AKShare] K线获取失败 002603: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002603 K线获取为空[AKShare] K线获取失败 002352: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300782: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 300529: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 002352: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 002352 K线获取为空[AKShare] K线获取失败 300782: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300782 K线获取为空[AKShare] K线获取失败 300529: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 300529 K线获取为空[扫描中] 97/197 (0.5 it/s), 预计剩余 3.6 min
-[警告] 数据源失败率 99% 高于阈值 35%（success=1, errors=94），继续扫描（ERROR_ABORT_ON_HIGH_FAILURE_RATE=False）
-[AKShare] K线获取失败 600900: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 688126: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[AKShare] K线获取失败 600900: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 600900 K线获取为空[扫描中] 147/197 (0.7 it/s), 预计剩余 1.2 min
-[警告] 数据源失败率 99% 高于阈值 35%（success=2, errors=143），继续扫描（ERROR_ABORT_ON_HIGH_FAILURE_RATE=False）
-[AKShare] K线获取失败 688126: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-[警告] 688126 K线获取为空[扫描中] 197/197 (0.9 it/s), 预计剩余 0.0 min
-[警告] 数据源失败率 98% 高于阈值 35%（success=3, errors=192），继续扫描（ERROR_ABORT_ON_HIGH_FAILURE_RATE=False）
-
-
-[输出] JSON已保存：选股结果\batch_20260514_20260515_172750\buy_signals_20260514_20260515_172750.json
-[输出] 运行说明 JSON：选股结果\batch_20260514_20260515_172750\run_meta_20260514_20260515_172750.json
-[输出] Excel已保存：D:\MyProjects\程序升级更新\程序更新\选股结果\batch_20260514_20260515_172750\buy_signals_20260514_20260515_172750.xlsx
-
-[HTML] 热力图已保存：选股结果\batch_20260514_20260515_172750\heatmap_20260514_20260515_172750.html
-[输出] 文字总览 Markdown：D:\MyProjects\程序升级更新\程序更新\选股结果\batch_20260514_20260515_172750\FINAL_REPORT_20260514_20260515_172750.md
-[输出] 可复制路径（聊天链接打不开时用）：D:\MyProjects\程序升级更新\程序更新\选股结果\打开本轮报告.txt
-[输出] 本轮结果目录：D:\MyProjects\程序升级更新\程序更新\选股结果\batch_20260514_20260515_172750
-[输出] K线日线截止日 trade_date=20260514；运行 2026-05-15 17:24:09 → 2026-05-15 17:27:50
-[输出] K线日线截止日：2026-05-14（20260514）。本批选股与技术指标均以该日为日线截面；目标日：未指定，走自动；模式：自动（get_last_trade_date(1)）。适用A股现货T+1：当日买入最早下一交易日方可卖出；操作建议中的「次日」类表述与此一致（不含融资融券当日回转等特殊规则）。本程序不包含券商报单、撤单等交易接口，输出仅供研究复盘；非资金曲线类逐日回测引擎。
-[输出] 子目录与旧版平铺文件均按文件名/目录名内时间戳保留约 7 天，便于对比。
-
-======================================================================
-[TOP197] 短线买入信号（评分≥4分，与操作建议阈值独立）
-======================================================================
-  无符合条件的买入信号
-
-======================================================================
-[统计] 摘要
-======================================================================
-  扫描总数：197
-  符合条件：3
-  强烈买入(≥8)：0
-  中等买入(6~8)：0
-
-  量能状态分布：
-    正常：3只
